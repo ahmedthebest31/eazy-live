@@ -1,7 +1,5 @@
-; © Copyright(C) All rights reserved.
-; This script is written by Mohamed Noordin.
 
-#Include  *i GST.ahk ; For getting selected text
+#NoTrayIcon     ; Hide the tray icon
 
 ; Win + F1: Switch to previous desktop
 #F1::
@@ -23,16 +21,12 @@ Return
 Run PowerShell
 Return
 
-; Win + Control + V to increase volume
-#^V::
-Send {Volume_Up}
-return
+#Z::
+    Run Chrome
+Return
 
-; Win + Shift + V to decrease volume
-#+V::
-Send {Volume_Down}
-return
 
-break::
-Send {Volume_Mute}
-return
+#NoEnv          ; Recommended for performance and compatibility with future AutoHotkey releases.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+
+^+v::Send {Raw}%Clipboard%
