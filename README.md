@@ -14,7 +14,15 @@ win + t : lunch windows termenal
 win + b : lunch Google Chrome
 win + Q : quit the running app like controle+F4
 switch desktops
-controle + F1 : switch desktop1
-controle + F2 : switch desktop2
-controle + F3 : switch desktop3
-controle + F4 : switch desktop4
+Win + F1: Switch to previous desktop
+Win + F2: Switch to next desktop
+Win + Q: Kill current running window, or process
+Win + T: Run the PowerShell (Windows Terminal)
+Win + S: Open up default browser
+Win + Control + V to increase volume
+Win + Shift + V to decrease volume
+
+tts - Select some text then press Control + Shift + F1 to speak
+Win + Shift + C search for clipboard text on Google search
+Win + Shift + X search for selected text on Google search
+
