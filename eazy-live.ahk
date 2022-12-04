@@ -1,5 +1,9 @@
-
 #NoTrayIcon     ; Hide the tray icon
+#NoEnv          ; Recommended for performance and compatibility with future AutoHotkey releases.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+
+; Required for getting the default browser.
+#Include *i DefaultBrowser.ahk
 
 ; Win + F1: Switch to previous desktop
 #F1::
@@ -13,7 +17,8 @@ Return
 
 ; Win + Q: Kill current running window, or process
 #Q::
-Send, !{F4}
+WinGetActiveTitle target
+WinKill %target%
 Return
 
 ; Win + T: Run the PowerShell (Windows Terminal)
@@ -21,12 +26,13 @@ Return
 Run PowerShell
 Return
 
-#Z::
-    Run Chrome
+; Win + Shift + B: Open up the default browser
+#+B::
+browser := DefaultBrowser()
+Run %browser%
 Return
 
-
-#NoEnv          ; Recommended for performance and compatibility with future AutoHotkey releases.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-
-^+v::Send {Raw}%Clipboard%
+; Control + Shift + V: Paste clipboard content to non-enterable fields
+^+V::
+Send {Raw}%Clipboard%
+Return
