@@ -14,7 +14,7 @@ Win + T: Launch Windows Terminal (PowerShell)
 Win + Shift + B: Launch default browser  
 Win + Q: Kill current window or process  
 
-Switch between Desktops
+Switch between Desktops:  
 Win + F1: Switch to previous desktop  
 Win + F2: Switch to next desktop  
 
@@ -24,5 +24,5 @@ We will continue contributing to Eazy-Live, and this is our Eazy-Live Roadmap:
 Add support to move current window to another desktop via a shortcut key.
 ***
 
-* Credits
+# Credits
 This script is developed and maintained by AhmedTheBest31 and MohamedNoordin.
